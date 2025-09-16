@@ -1,0 +1,4 @@
+t1 = (1, 2, 5, 7, 9, 2, 4, 6, 8, 10)
+mid = len(t1) // 2
+print(t1[:mid])
+print(t1[mid:])
