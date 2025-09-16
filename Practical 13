@@ -1,0 +1,11 @@
+def validate_name(name):
+    if not name.isalpha():
+        raise ValueError("Name must contain only alphabets")
+    return name
+
+try:
+    user_name = input("Enter your name: ")
+    valid_name = validate_name(user_name)
+    print("Valid name:", valid_name)
+except ValueError as e:
+    print("Error:", e)
