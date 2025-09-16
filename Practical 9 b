@@ -1,0 +1,14 @@
+def char_frequency(filename):
+    try:
+        with open(filename, "r") as f:
+            text = f.read()
+            freq = {}
+            for ch in text:
+                freq[ch] = freq.get(ch, 0) + 1
+        for k, v in freq.items():
+            print(f"{k}: {v}")
+    except FileNotFoundError:
+        print("Error: File not found!")
+
+filename = "sample.txt"
+char_frequency(filename)
