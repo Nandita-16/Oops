@@ -1,0 +1,17 @@
+def split_lines(filename):
+    try:
+        with open(filename, "r") as f:
+            lines = f.readlines()
+        with open("File1.txt", "w") as f1, open("File2.txt", "w") as f2:
+            for i, line in enumerate(lines, start=1):
+                if i % 2 == 0:
+                    f1.write(line)
+                else:
+                    f2.write(line)
+        print("Odd lines written to File2.txt")
+        print("Even lines written to File1.txt")
+    except FileNotFoundError:
+        print("Error: File not found!")
+
+filename = "sample.txt"
+split_lines(filename)
